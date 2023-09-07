@@ -3,7 +3,7 @@ from pathlib import Path
 
 # Check PyTorch version
 pytorch_version_l = '1.11.0'
-pytorch_version_u = '1.13.0' # excluded
+pytorch_version_u = '2.0.1' # excluded
 msg_install_pytorch = (f'It is recommended to manually install PyTorch '
                     f'(>={pytorch_version_u},<{pytorch_version_u}) suitable '
                     'for your system ahead: https://pytorch.org/get-started.\n')
@@ -38,8 +38,8 @@ setup(
     author_email='xu.kaid@husky.neu.edu, zhouxingshichn@gmail.com, huan@huan-zhang.com, wangyihan617@gmail.com, sw3215@columbia.edu,linyi2@illinois.edu,jinqic@cs.cmu.edu,zhuolin5@illinois.edu',
     packages=find_packages(),
     install_requires=[
-        f'torch>={pytorch_version_l},<{pytorch_version_u}',
-        'torchvision>=0.9,<0.14',
+        f'torch>={pytorch_version_l},<={pytorch_version_u}',
+        'torchvision>=0.9',
         'numpy>=1.20',
         'packaging>=20.0',
         'pytest>=5.0',
